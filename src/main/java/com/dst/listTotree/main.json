@@ -3,8 +3,8 @@
     "detail": {
       "id": "1",
       "itemId": "1",
-      "parentId": "0",
-      "pid": "0",
+      "parentId": "",
+      "pid": "",
       "textContent": "name1",
       "url": "url1"
     },
@@ -37,8 +37,8 @@
     "detail": {
       "id": "2",
       "itemId": "2",
-      "parentId": "0",
-      "pid": "0",
+      "parentId": "",
+      "pid": "",
       "textContent": "name2",
       "url": "url2"
     },

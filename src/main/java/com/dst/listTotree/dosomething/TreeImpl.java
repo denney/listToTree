@@ -1,5 +1,12 @@
-package com.dst.listTotree.main;
+package com.dst.listTotree.dosomething;
 
+import com.dst.listTotree.model.Tree;
+
+
+/**
+ * 该类为业务类，需要实现tree接口
+ * @denny
+ */
 public class TreeImpl implements Tree {
 
 

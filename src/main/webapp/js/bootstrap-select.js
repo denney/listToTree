@@ -656,7 +656,7 @@
         }
 
         if (!$this.data('content')) {
-          // Prepend any icon and append any subtext to the main text.
+          // Prepend any icon and append any subtext to the dosomething text.
           text = icon + '<span class="text">' + text + subtext + '</span>';
         }
 

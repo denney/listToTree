@@ -1,59 +1,22 @@
 package com.dst.listTotree.util;
 
+import com.dst.listTotree.model.Tree;
 import com.dst.listTotree.model.TreeModel;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-import com.dst.listTotree.main.Tree;
 
 import java.util.*;
-import java.util.List;
 
+/**
+ * list转tree工具类
+ * @denny
+ */
 public class TreeUtil {
-    public static JSONArray getTreeData(JSONArray array) {
-        JSONArray jsonArray = new JSONArray();
-        JSONObject jsonObject = new JSONObject();
 
 
-        if (array != null) {
-            for (int i = 0; i < array.size(); i++) {
-                if (array.getJSONObject(i).getString("menuParentId").equals("0")) {
-                    jsonObject.put("id", array.getJSONObject(i).getString("menuId"));
-                    jsonObject.put("text", array.getJSONObject(i).getString("name"));
-                    String itemid = array.getJSONObject(i).getString("menuId");
-                    jsonObject.put("nodes", add(array, itemid, array.size()));
-                    jsonArray.add(jsonObject);
-                }
-
-            }
-        } else {
-            jsonArray = null;
-        }
-        return jsonArray;
-    }
-
-
-    private static JSONArray add(JSONArray array, String itemid, int length) {
-
-
-        JSONArray jsonArray = new JSONArray();
-        JSONObject jsonObject = new JSONObject();
-        for (int i = 0; i < length; i++) {
-            if (itemid.equals(array.getJSONObject(i).getString("menuParentId"))) {
-                jsonObject.put("id", array.getJSONObject(i).getString("menuId"));
-                jsonObject.put("text", array.getJSONObject(i).getString("name"));
-                String cid = array.getJSONObject(i).getString("menuId");
-                if (add(array, cid, length).size() != 0) {
-                    jsonObject.put("nodes", add(array, cid, length));
-                }
-                jsonArray.add(jsonObject);
-                jsonObject.clear();
-            }
-        }
-
-
-        return jsonArray;
-    }
-
+    /**
+     * 获取业务类数据
+     * @param list
+     * @return
+     */
     public static List<TreeModel> getTree(List<? extends Tree> list) {
 
         List<Tree> array = new ArrayList<>(list);
@@ -67,7 +30,11 @@ public class TreeUtil {
 
     }
 
-
+    /**
+     * 寻找顶级父节点
+     * @param array
+     * @return
+     */
     public static List<TreeModel> getData(List<TreeModel> array) {
 
 
@@ -112,6 +79,13 @@ public class TreeUtil {
         return list;
     }
 
+
+    /**
+     * 核心工具类
+     * @param array
+     * @param itemid
+     * @return
+     */
     private static List<TreeModel> addList(List<TreeModel> array, String itemid) {
         List<TreeModel> list = new ArrayList<>();
 
@@ -131,8 +105,6 @@ public class TreeUtil {
 
         return list;
     }
-
-
 
 
 }

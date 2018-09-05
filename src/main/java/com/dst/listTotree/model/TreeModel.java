@@ -1,10 +1,12 @@
 package com.dst.listTotree.model;
 
 
-import com.dst.listTotree.main.Tree;
-
 import java.util.List;
 
+/**
+ * tree结构模型，可以通过添加属性进行定制
+ * @denny
+ */
 public class TreeModel {
 
 

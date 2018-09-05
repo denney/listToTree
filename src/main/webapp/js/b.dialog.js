@@ -338,9 +338,9 @@
 	        
 	        // position the dialog box and make it visible
 	        /*
-	        $(main).css({
+	        $(dosomething).css({
 
-	            'top':          main.dialog_top,
+	            'top':          dosomething.dialog_top,
 	            'visibility':   'visible',
 	            'opacity':      0
 
