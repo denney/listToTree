@@ -161,29 +161,6 @@ public class TreeUtil {
 //    }
 
 
-    public static void main(String[] args) {
 
-
-//        private String menuId;
-//        private String menuParentId;
-//        private String name;
-
-        List list = new ArrayList();
-        TreeImpl tree = new TreeImpl("1", "0", "name1", "url1");
-        list.add(tree);
-
-        tree = new TreeImpl("2", "0", "name2", "url2");
-        list.add(tree);
-
-        tree = new TreeImpl("3", "1", "name3", "url3");
-        list.add(tree);
-
-        tree = new TreeImpl("4", "1", "name4", "url4");
-        list.add(tree);
-
-
-        System.out.println(JSONArray.fromObject(getTree(list)));
-//
-    }
 
 }
