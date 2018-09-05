@@ -1,0 +1,63 @@
+[
+  {
+    "itemId": "1",
+    "itemName": "name1",
+    "nodes": [
+      {
+        "itemId": "3",
+        "itemName": "name3",
+        "nodes": [],
+        "parentId": "1",
+        "tree": {
+          "id": "3",
+          "itemId": "3",
+          "itemName": "name3",
+          "parentId": "1",
+          "pid": "1",
+          "textContent": "name3",
+          "url": "url3"
+        }
+      },
+      {
+        "itemId": "4",
+        "itemName": "name4",
+        "nodes": [],
+        "parentId": "1",
+        "tree": {
+          "id": "4",
+          "itemId": "4",
+          "itemName": "name4",
+          "parentId": "1",
+          "pid": "1",
+          "textContent": "name4",
+          "url": "url4"
+        }
+      }
+    ],
+    "parentId": "0",
+    "tree": {
+      "id": "1",
+      "itemId": "1",
+      "itemName": "name1",
+      "parentId": "0",
+      "pid": "0",
+      "textContent": "name1",
+      "url": "url1"
+    }
+  },
+  {
+    "itemId": "2",
+    "itemName": "name2",
+    "nodes": [],
+    "parentId": "0",
+    "tree": {
+      "id": "2",
+      "itemId": "2",
+      "itemName": "name2",
+      "parentId": "0",
+      "pid": "0",
+      "textContent": "name2",
+      "url": "url2"
+    }
+  }
+]
