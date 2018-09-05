@@ -1,7 +1,7 @@
 
 
 
-package test1;
+package test1.util;
 
 
 import net.sf.json.JSONObject;

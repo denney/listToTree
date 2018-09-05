@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffc39aff-e338-4acd-8255-d76e05e37bf2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../test_maven_web/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../test_maven_web/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/Main_test.java" afterPath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/Main_test.java" />
-      <change beforePath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/TreeUtil.java" afterPath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/TreeUtil.java" />
+      <change beforePath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/HttpClientUtil.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java" afterPath="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="HttpClientUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/HttpClientUtil.java">
+      <file leaf-file-name="HttpClientUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="39" column="57" lean-forward="false" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+            <state relative-caret-position="442">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main_test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main_test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/Main_test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,6 +165,7 @@
         <option value="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/model/TreeModel.java" />
         <option value="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/TreeUtil.java" />
         <option value="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/Main_test.java" />
+        <option value="$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java" />
       </list>
     </option>
   </component>
@@ -379,7 +379,7 @@
     <configuration name="Main_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="test1.*" />
+          <option name="PATTERN" value="test1.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -571,15 +571,24 @@
       <workItem from="1530669783473" duration="3756000" />
       <workItem from="1536039589783" duration="2944000" />
       <workItem from="1536114868790" duration="2296000" />
-      <workItem from="1536117362122" duration="10743000" />
+      <workItem from="1536117362122" duration="10781000" />
     </task>
+    <task id="LOCAL-00001" summary="修改main方法，测试可通过">
+      <created>1536133436341</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536133436341</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19739000" />
+    <option name="totallyTimeSpent" value="19777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -600,7 +609,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36193618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36193618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33351177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -619,6 +628,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改main方法，测试可通过" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改main方法，测试可通过" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -664,7 +677,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/HttpClientUtil.java">
+    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="39" column="57" lean-forward="false" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
@@ -761,7 +774,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/HttpClientUtil.java">
+    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -822,7 +835,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/HttpClientUtil.java">
+    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -888,16 +901,6 @@
         <state relative-caret-position="190">
           <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/HttpClientUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="39" column="57" lean-forward="false" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,9 +992,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/Main_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test_maven_web/src/main/java/test1/util/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
