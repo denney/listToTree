@@ -4,7 +4,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="test_maven_web" />
+          <element id="module-output" name="listToTree" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" />
@@ -20,7 +20,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../test_maven_web/target/test_maven_web/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="test_maven_web/web/Web" />
+      <element id="javaee-facet-resources" facet="listToTree/web/Web" />
     </root>
   </artifact>
 </component>
