@@ -1,7 +1,7 @@
-package test1.model;
+package com.dst.listTotree.model;
 
 
-import test1.main.Tree;
+import com.dst.listTotree.main.Tree;
 
 import java.util.List;
 

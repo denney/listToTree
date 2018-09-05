@@ -1,4 +1,4 @@
-package test1.main;
+package com.dst.listTotree.main;
 
 public interface Tree {
 

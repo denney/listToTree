@@ -1,10 +1,9 @@
-package test1.util;
+package com.dst.listTotree.util;
 
+import com.dst.listTotree.model.TreeModel;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import test1.main.Tree;
-import test1.main.TreeImpl;
-import test1.model.TreeModel;
+import com.dst.listTotree.main.Tree;
 
 import java.util.*;
 import java.util.List;
