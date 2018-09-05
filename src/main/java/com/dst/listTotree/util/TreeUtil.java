@@ -59,8 +59,8 @@ public class TreeUtil {
         List<Tree> array = new ArrayList<>(list);
         List<TreeModel> treeModelList = new ArrayList<>();
         for (Tree tree : array) {
-            TreeModel treeModel = new TreeModel(tree.getItemId(), tree.getParentId(), tree.getItemName());
-            treeModel.setTree(tree);
+            TreeModel treeModel = new TreeModel();
+            treeModel.setDetail(tree);
             treeModelList.add(treeModel);
         }
         return getData(treeModelList);
@@ -81,8 +81,8 @@ public class TreeUtil {
             Map<String, Object> mapChild = new HashMap<>();
             for (TreeModel treeMode : array) {
 
-                set.add(treeMode.getParentId());
-                mapChild.put(treeMode.getItemId(), treeMode);
+                set.add(treeMode.getDetail().getParentId());
+                mapChild.put(treeMode.getDetail().getItemId(), treeMode);
             }
 
             for (String pid : set) {
@@ -93,10 +93,10 @@ public class TreeUtil {
 
 
             for (TreeModel treeModel : array) {
-                if (setparentId.contains(treeModel.getParentId())) {
+                if (setparentId.contains(treeModel.getDetail().getParentId())) {
 
 
-                    String itemid = treeModel.getItemId();
+                    String itemid = treeModel.getDetail().getItemId();
 
 
                     treeModel.setNodes(addList(array, itemid));
@@ -116,9 +116,9 @@ public class TreeUtil {
         List<TreeModel> list = new ArrayList<>();
 
         for (TreeModel treeModel : array) {
-            if (itemid.equals(treeModel.getParentId())) {
+            if (itemid.equals(treeModel.getDetail().getParentId())) {
 
-                String cid = treeModel.getItemId();
+                String cid = treeModel.getDetail().getItemId();
 
                 if (addList(array, cid).size() != 0) {
                     treeModel.setNodes(addList(array, cid));
@@ -131,33 +131,6 @@ public class TreeUtil {
 
         return list;
     }
-
-
-//    public static void main(String[] args) {
-//
-//
-////        private String menuId;
-////        private String menuParentId;
-////        private String name;
-//
-//        List list = new ArrayList();
-//        TreeModel treeModel = new TreeModel("1", "0", "name1");
-//        list.add(treeModel);
-//
-//        treeModel = new TreeModel("2", "0", "name2");
-//        list.add(treeModel);
-//
-//        treeModel = new TreeModel("3", "1", "name3");
-//        list.add(treeModel);
-//
-//        treeModel = new TreeModel("4", "1", "name4");
-//        list.add(treeModel);
-//
-////        System.out.println(getTreeData(JSONArray.fromObject(list)));
-//
-//        System.out.println(JSONArray.fromObject(getData(list)));
-//
-//    }
 
 
 
