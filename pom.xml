@@ -9,7 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <itemName>test_maven_web Maven Webapp</itemName>
+  <!--<itemName>listToTree</itemName>-->
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
