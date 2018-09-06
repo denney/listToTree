@@ -1,74 +1,19 @@
 [
-    {
-      "id1": 1,
-      "pid1": 0,
-      "name": "系统管理",
-      "permissionValue": "open:system:get"
-    },
-    {
-      "id1": 2,
-      "pid1": 0,
-      "name": "字典管理",
-      "permissionValue": "open:dict:get"
-    },
-    {
-      "id1": 20,
-      "pid1": 1,
-      "name": "新增系统",
-      "permissionValue": "open:system:add"
-    },
-    {
-      "id1": 21,
-      "pid1": 1,
-      "name": "编辑系统",
-      "permissionValue": "open:system:edit"
-    },
-    {
-      "id1": 22,
-      "pid1": 1,
-      "name": "删除系统",
-      "permissionValue": "open:system:delete"
-    },
-    {
-      "id1": 33,
-      "pid1": 2,
-      "name": "系统环境",
-      "permissionValue": "open:env:get"
-    },
-    {
-      "id1": 333,
-      "pid1": 33,
-      "name": "新增环境",
-      "permissionValue": "open:env:add"
-    },
-    {
-      "id1": 3333,
-      "pid1": 33,
-      "name": "编辑环境",
-      "permissionValue": "open:env:edit"
-    },
-    {
-      "id1": 233332,
-      "pid1": 33,
-      "name": "删除环境",
-      "permissionValue": "open:env:delete"
-    }
-    // {
-    //   "fCalcid":1010000104,
-    //   "fCalcitemid":101000010402,
-    //   "fItemname":"空调用电",
-    //   "fParentitemid":101000010401,
-    // },
-    // {
-    //   "fCalcid":1010000104,
-    //   "fCalcitemid":101000010401,
-    //   "fItemname":"西区总用能",
-    //   "fParentitemid":-1,
-    // },
-    // {
-    //   "fCalcid":1010000104,
-    //   "fCalcitemid":101000010403,
-    //   "fItemname":"空调用电",
-    //   "fParentitemid":101000010401,
-    // }
+
+  {
+      "fCalcitemid": 101000010401,
+      "fParentitemid": 0,
+      "fItemname": "西区总"
+  },
+  {
+      "fCalcitemid": 101000010403,
+      "fParentitemid": 101000010401,
+      "fItemname": "动力用电"
+  },
+  {
+      "fCalcitemid": 101000010404,
+      "fParentitemid": 101000010401,
+      "fItemname": "楼层照明"
+  }
+
 ]

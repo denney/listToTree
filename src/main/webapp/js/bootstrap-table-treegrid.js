@@ -6,8 +6,8 @@
     'use strict';
     $.extend($.fn.bootstrapTable.defaults, {
         treeShowField: null,
-        idField: 'id',
-        parentIdField: 'pid',
+        idField: 'fCalcitemid',
+        parentIdField: 'fParentitemid',
         onGetNodes: function (row, data) {
             var that = this;
             var nodes = [];

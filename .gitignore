@@ -88,3 +88,5 @@ hs_err_pid*
 /.idea/
 /target/
 /listToTree.iml
+src/main/Resources/
+src/main/webapp/js/mf-pattern/img/

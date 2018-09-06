@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="css/bootstrap-table.css">
 	<link rel="stylesheet" href="css/jquery.treegrid.min.css">
 	<script src="js/jquery-2.0.3.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-table.js"></script>
 	<script src="js/bootstrap-table-treegrid.js"></script>
 	<script src="js/jquery.treegrid.min.js"></script>
@@ -18,85 +17,24 @@
 
 <script type="text/javascript">
 	var $table = $('#table');
-	// var data = [
-	// {
-	// 	"id": 1,
-	// 	"pid": 0,
-	// 	"itemName": "系统管理",
-	// 	"permissionValue": "open:system:get"
-	// },
-	// {
-	// 	"id": 2,
-	// 	"pid": 0,
-	// 	"itemName": "字典管理",
-	// 	"permissionValue": "open:dict:get"
-	// },
-	// {
-	// 	"id": 20,
-	// 	"pid": 1,
-	// 	"itemName": "新增系统",
-	// 	"permissionValue": "open:system:add"
-	// },
-	// {
-	// 	"id": 21,
-	// 	"pid": 1,
-	// 	"itemName": "编辑系统",
-	// 	"permissionValue": "open:system:edit"
-	// },
-	// {
-	// 	"id": 22,
-	// 	"pid": 1,
-	// 	"itemName": "删除系统",
-	// 	"permissionValue": "open:system:delete"
-	// },
-	// {
-	// 	"id": 33,
-	// 	"pid": 2,
-	// 	"itemName": "系统环境",
-	// 	"permissionValue": "open:env:get"
-	// },
-	// {
-	// 	"id": 333,
-	// 	"pid": 33,
-	// 	"itemName": "新增环境",
-	// 	"permissionValue": "open:env:add"
-	// },
-	// {
-	// 	"id": 3333,
-	// 	"pid": 33,
-	// 	"itemName": "编辑环境",
-	// 	"permissionValue": "open:env:edit"
-	// },
-	// {
-	// 	"id": 233332,
-	// 	"pid": 33,
-	// 	"itemName": "删除环境",
-	// 	"permissionValue": "open:env:delete"
-	// }
-	// ];
 	$(function() {
 		$table.bootstrapTable({
             url: './treegrid.json',
-            // data:data,
+            //data:data,
             height: $(window).height(),
             striped: true,
-            sidePagination: 'server',
-            idField: 'id',
+            idField: 'fCalcitemid',
             columns: [
             {
-            	field: 'ck',
-            	checkbox: true
+            	field: 'fItemname',
+            	title: '计算项',
             },
-            {
-            	field: 'itemName',
-            	title: '名称',
-            },
-            {
-            	field: 'permissionValue',
-            	title: '权限值',
-            	sortable: true,
-            	align: 'center',
-            },
+            // {
+            // 	field: 'permissionValue',
+            // 	title: '权限值',
+            // 	sortable: true,
+            // 	align: 'center',
+            // },
             {
             	field:'button',
             	title:'操作',
@@ -110,21 +48,22 @@
             },
 
             // bootstrap-table-tree-column.js 插件配置
-		    // treeShowField: 'itemName',
+		    // treeShowField: 'name',
 		    // parentIdField: 'pid'
 		    // bootstrap-table-tree-column.js 插件配置
 
 		    // bootstrap-table-treegrid.js 插件配置
-		    treeShowField: 'itemName',
-		    parentIdField: 'pid',
+		    treeShowField: 'fItemname',
+		    parentIdField: 'fParentitemid',
 		    onLoadSuccess: function(data) {
-		    	console.log('load');
+		    	console.log(data);
 		    	$table.treegrid({
-		    		treeColumn: 1,
+		    		treeColumn: 0,
 		    		onChange: function() {
 		    			$table.bootstrapTable('resetWidth');
 		    		}
 		    	});
+                $table.treegrid('collapseAll');
 		    }
 		});
 	});  
