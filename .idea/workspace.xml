@@ -7,157 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffc39aff-e338-4acd-8255-d76e05e37bf2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/collapse.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/expand.png" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/b.dialog.bootstrap3.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-select.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-select.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/jquery.treegrid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/main (2).css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/b.dialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-select.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-table-treegrid.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-table-treegrid.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrapTable.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/drag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/hls.light.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-1.4.4.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-ui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.overscroll.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/mf-pattern/mF_fancy.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/mf-pattern/mF_fancy.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/myfocus-2.0.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/AUTHORS.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/core.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/jquery.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/jquery.slim.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/jquery.slim.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/dist/jquery.slim.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/external/sizzle/LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/external/sizzle/dist/sizzle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/external/sizzle/dist/sizzle.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/external/sizzle/dist/sizzle.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/.eslintrc.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/jsonp.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/load.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/parseXML.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/script.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/var/location.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/var/nonce.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/var/rquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/ajax/xhr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/attributes.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/attributes/attr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/attributes/classes.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/attributes/prop.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/attributes/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/attributes/val.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/callbacks.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/DOMEval.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/access.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/init.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/nodeName.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/parseHTML.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/ready-no-deferred.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/ready.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/readyException.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/stripAndCollapse.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/core/var/rsingleTag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/addGetHookIf.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/adjustCSS.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/curCSS.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/hiddenVisibleSelectors.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/showHide.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/var/cssExpand.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/var/getStyles.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/var/isHiddenWithinTree.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/var/rmargin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/var/rnumnonpx.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/css/var/swap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/data.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/data/Data.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/data/var/acceptData.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/data/var/dataPriv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/data/var/dataUser.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/deferred.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/deferred/exceptionHook.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/deprecated.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/dimensions.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/effects.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/effects/Tween.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/effects/animatedSelector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/event.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/event/ajax.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/event/alias.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/event/focusin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/event/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/event/trigger.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/exports/amd.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/exports/global.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/_evalUrl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/buildFragment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/getAll.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/setGlobalEval.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/var/rcheckableType.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/var/rscriptType.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/var/rtagName.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/manipulation/wrapMap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/offset.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/queue.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/queue/delay.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/selector-native.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/selector-sizzle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/selector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/serialize.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/traversing.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/traversing/findFilter.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/traversing/var/dir.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/traversing/var/rneedsContext.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/traversing/var/siblings.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/ObjectFunctionString.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/arr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/class2type.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/concat.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/document.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/documentElement.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/fnToString.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/getProto.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/hasOwn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/indexOf.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/pnum.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/push.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/rcssNum.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/rnothtmlwhite.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/slice.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/var/toString.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/node_modules/jquery/src/wrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/package-lock.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/setHomeSetFav.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/treegrid.html" afterPath="$PROJECT_DIR$/src/main/webapp/treetable.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/treegrid.json" afterPath="$PROJECT_DIR$/src/main/webapp/treegrid.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -208,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="102">
-                <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <first_editor relative-caret-position="292">
+                <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -614,7 +464,7 @@
       <workItem from="1536117362122" duration="13995000" />
       <workItem from="1536137409134" duration="74000" />
       <workItem from="1536137580565" duration="1343000" />
-      <workItem from="1536194550009" duration="1574000" />
+      <workItem from="1536194550009" duration="1596000" />
     </task>
     <task id="LOCAL-00001" summary="修改main方法，测试可通过">
       <created>1536133436341</created>
@@ -686,11 +536,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536195583418</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="增加忽略文件">
+      <created>1536196151577</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1536196151577</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25982000" />
+    <option name="totallyTimeSpent" value="26004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="15" width="1878" height="981" extended-state="0" />
@@ -922,8 +779,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="102">
-            <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <first_editor relative-caret-position="292">
+            <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
