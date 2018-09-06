@@ -90,3 +90,4 @@ hs_err_pid*
 /listToTree.iml
 src/main/Resources/
 src/main/webapp/js/mf-pattern/img/
+/.idea/workspace.xml
