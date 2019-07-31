@@ -1,12 +1,13 @@
 package com.dst.listTotree.util;
 
 import com.dst.listTotree.model.Tree;
-import com.dst.listTotree.model.TreeModel;
+import com.dst.listTotree.model.Model;
 
 import java.util.*;
 
 /**
  * list转tree工具类
+ *
  * @denny
  */
 public class TreeUtil {
@@ -14,15 +15,16 @@ public class TreeUtil {
 
     /**
      * 获取业务类数据
+     *
      * @param list
      * @return
      */
-    public static List<TreeModel> getTree(List<? extends Tree> list) {
+    public static List<Model> getTree(List<? extends Tree> list) {
 
         List<Tree> array = new ArrayList<>(list);
-        List<TreeModel> modelList = new ArrayList<>();
+        List<Model> modelList = new ArrayList<>();
         for (Tree tree : array) {
-            TreeModel treeModel = new TreeModel();
+            Model treeModel = new Model();
             treeModel.setId(tree.getItemId());
             treeModel.setPid(tree.getParentId());
             treeModel.setName(tree.getName());
@@ -36,41 +38,27 @@ public class TreeUtil {
 
     /**
      * 寻找顶级父节点
-     * @param array
+     *
+     * @param modelList
      * @return
      */
-    public static List<TreeModel> getData(List<TreeModel> array) {
+    public static List<Model> getData(List<Model> modelList) {
 
 
-        List<TreeModel> list = new ArrayList<>();
+        List<Model> list = new ArrayList<>();
 
 
-        if (array != null) {
-            Set<String> set = new HashSet<>();
-            Set<String> setparentId = new HashSet<>();
-
-            Map<String, Object> mapChild = new HashMap<>();
-            for (TreeModel treeMode : array) {
-
-                set.add(treeMode.getPid());
-                mapChild.put(treeMode.getId(), treeMode);
-            }
-
-            for (String pid : set) {
-                if (mapChild.get(pid) == null) {
-                    setparentId.add(pid);
-                }
-            }
+        if (modelList != null) {
 
 
-            for (TreeModel treeModel : array) {
-                if (setparentId.contains(treeModel.getPid())) {
+            for (Model treeModel : modelList) {
+                if (treeModel.getPid() == null || "".equals(treeModel.getPid()) || "0".equals(treeModel.getPid())|| "-1".equals(treeModel.getPid())) {
 
 
                     String itemid = treeModel.getId();
 
 
-                    treeModel.setNodes(addList(array, itemid));
+                    treeModel.setNodes(addList(modelList, itemid));
 
 
                     list.add(treeModel);
@@ -86,22 +74,23 @@ public class TreeUtil {
 
     /**
      * 核心工具类
+     *
      * @param array
      * @param itemid
      * @return
      */
-    private static List<TreeModel> addList(List<TreeModel> array, String itemid) {
-        List<TreeModel> list = new ArrayList<>();
+    private static List<Model> addList(List<Model> array, String itemid) {
+        List<Model> list = new ArrayList<>();
 
-        for (TreeModel treeModel : array) {
-            if (itemid.equals(treeModel.getPid())) {
+        for (Model model : array) {
+            if (itemid.equals(model.getPid())) {
 
-                String cid = treeModel.getId();
+                String cid = model.getId();
 
                 if (addList(array, cid).size() != 0) {
-                    treeModel.setNodes(addList(array, cid));
+                    model.setNodes(addList(array, cid));
                 }
-                list.add(treeModel);
+                list.add(model);
 
             }
         }

@@ -7,10 +7,10 @@ import java.util.List;
  * tree结构模型，可以通过添加属性进行定制
  * @denny
  */
-public class TreeModel {
+public class Model {
 
 
-    private List<TreeModel> nodes;
+    private List<Model> nodes;
     private String id;
     private String name;
     private String pid;
@@ -48,14 +48,14 @@ public class TreeModel {
 //        this.detail = detail;
 //    }
 
-    public TreeModel() {
+    public Model() {
     }
 
-    public List<TreeModel> getNodes() {
+    public List<Model> getNodes() {
         return nodes;
     }
 
-    public void setNodes(List<TreeModel> nodes) {
+    public void setNodes(List<Model> nodes) {
         this.nodes = nodes;
     }
 

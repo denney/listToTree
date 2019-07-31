@@ -7,7 +7,7 @@ import com.dst.listTotree.model.Tree;
  * 该类为业务类，需要实现tree接口
  * @denny
  */
-public class TreeImpl implements Tree {
+public class Menu implements Tree {
 
 
     private String id;
@@ -23,7 +23,7 @@ public class TreeImpl implements Tree {
         this.url = url;
     }
 
-    public TreeImpl(String id, String pid, String textContent,String url) {
+    public Menu(String id, String pid, String textContent, String url) {
         this.id = id;
         this.textContent = textContent;
         this.pid = pid;
