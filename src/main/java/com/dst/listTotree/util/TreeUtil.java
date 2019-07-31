@@ -20,13 +20,14 @@ public class TreeUtil {
     public static List<TreeModel> getTree(List<? extends Tree> list) {
 
         List<Tree> array = new ArrayList<>(list);
-        List<TreeModel> treeModelList = new ArrayList<>();
+        List<TreeModel> modelList = new ArrayList<>();
         for (Tree tree : array) {
             TreeModel treeModel = new TreeModel();
             treeModel.setDetail(tree);
-            treeModelList.add(treeModel);
+            modelList.add(treeModel);
         }
-        return getData(treeModelList);
+        return getData(modelList);
+
 
     }
 
