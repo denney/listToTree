@@ -48,6 +48,7 @@ public class TreeUtil {
             if (treestate.getParentId() == null || "".equals(treestate.getParentId()) || "0".equals(treestate.getParentId()) || "-1".equals(treestate.getParentId())) {
                 set.add(treestate.getItemId());
             } else {
+                set.add(treestate.getItemId());
                 set = getSet(list, treestate, set);
             }
 
@@ -82,6 +83,7 @@ public class TreeUtil {
     }
 
     private static Set getSet(List<? extends Tree> list, Tree treestate, Set set) {
+
 
 //        根据id查找父级，
 //        根据菜单id 找到父级id

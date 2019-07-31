@@ -22,22 +22,27 @@ public class Main {
 
         menu = new Menu("3", "1", "name3", "url3");
         list.add(menu);
-        list1.add(menu);
+
 
         menu = new Menu("4", "1", "name4", "url4");
         list.add(menu);
+        menu = new Menu("11", "4", "name4", "url4");
+        list.add(menu);
 
+        menu = new Menu("12", "11", "name4", "url4");
+        list.add(menu);
 
+        list1.add(menu);
         menu = new Menu("5", "0", "name4", "url4");
         list.add(menu);
-        list1.add(menu);
+
         menu = new Menu("6", "-1", "name4", "url4");
         list.add(menu);
         menu = new Menu("7", "0", "name4", "url4");
         list.add(menu);
 
 
-        list1.add(menu);
+
 
 //        System.out.println(JSONArray.fromObject(TreeUtil.getTree(list)));
         System.out.println(JSONArray.fromObject(TreeUtil.getTreeState(list,list1)));
