@@ -23,7 +23,10 @@ public class TreeUtil {
         List<TreeModel> modelList = new ArrayList<>();
         for (Tree tree : array) {
             TreeModel treeModel = new TreeModel();
-            treeModel.setDetail(tree);
+            treeModel.setId(tree.getItemId());
+            treeModel.setPid(tree.getParentId());
+            treeModel.setName(tree.getName());
+
             modelList.add(treeModel);
         }
         return getData(modelList);
@@ -49,8 +52,8 @@ public class TreeUtil {
             Map<String, Object> mapChild = new HashMap<>();
             for (TreeModel treeMode : array) {
 
-                set.add(treeMode.getDetail().getParentId());
-                mapChild.put(treeMode.getDetail().getItemId(), treeMode);
+                set.add(treeMode.getPid());
+                mapChild.put(treeMode.getId(), treeMode);
             }
 
             for (String pid : set) {
@@ -61,10 +64,10 @@ public class TreeUtil {
 
 
             for (TreeModel treeModel : array) {
-                if (setparentId.contains(treeModel.getDetail().getParentId())) {
+                if (setparentId.contains(treeModel.getPid())) {
 
 
-                    String itemid = treeModel.getDetail().getItemId();
+                    String itemid = treeModel.getId();
 
 
                     treeModel.setNodes(addList(array, itemid));
@@ -91,9 +94,9 @@ public class TreeUtil {
         List<TreeModel> list = new ArrayList<>();
 
         for (TreeModel treeModel : array) {
-            if (itemid.equals(treeModel.getDetail().getParentId())) {
+            if (itemid.equals(treeModel.getPid())) {
 
-                String cid = treeModel.getDetail().getItemId();
+                String cid = treeModel.getId();
 
                 if (addList(array, cid).size() != 0) {
                     treeModel.setNodes(addList(array, cid));

@@ -64,7 +64,10 @@ public class TreeImpl implements Tree {
         return this.pid;
     }
 
-
+    @Override
+    public String getName() {
+        return getTextContent();
+    }
 
 
 }
