@@ -108,17 +108,22 @@ public class TreeUtil {
         return modelList;
     }
 
-    private static Set getSet(List<? extends Tree> list, List<? extends Tree> listState) {
+    private static Set getSet(List<? extends Tree> list, List<? extends Tree> statesList) {
         Set set = new HashSet();
         //根据最末端id，查询该末端id对应的父及id，并设置为true
-        List<Tree> treeArraystateList = new ArrayList<>(listState);
-        for (Tree treestate : treeArraystateList) {
+        List<Tree> stateList = new ArrayList<>(statesList);
+        for (Tree state : stateList) {
 //            查询出父亲级id 并保存在set集合中
-            if (isaBoolean(treestate.getParentId())) {
-                set.add(treestate.getItemId());
+            
+            //如果状态项的父及为根节点（root）直接将此项放入set集合中
+            if (isaBoolean(state.getParentId())) {
+                set.add(state.getItemId());
             } else {
-                set.add(treestate.getItemId());
-                set = getSet(list, treestate, set);
+                //否则，先将状态项放入set,
+                set.add(state.getItemId());
+                
+                //然后求其父节点项的父节点项
+                set = getSet(list, state, set);
             }
 
 
