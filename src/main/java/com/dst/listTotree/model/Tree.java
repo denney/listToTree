@@ -9,6 +9,7 @@ public interface Tree {
    String getItemId();
    String getParentId();
    String getName();
+   String getCheckedd();
 
 
 }

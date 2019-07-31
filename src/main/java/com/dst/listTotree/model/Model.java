@@ -14,6 +14,15 @@ public class Model {
     private String id;
     private String name;
     private String pid;
+    private String state;
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
 
     public String getId() {
         return id;

@@ -14,6 +14,15 @@ public class Menu implements Tree {
     private String textContent;
     private String pid;
     private String url;
+    private String checked;
+
+    public String getChecked() {
+        return checked;
+    }
+
+    public void setChecked(String checked) {
+        this.checked = checked;
+    }
 
     public String getUrl() {
         return url;
@@ -67,6 +76,11 @@ public class Menu implements Tree {
     @Override
     public String getName() {
         return getTextContent();
+    }
+
+    @Override
+    public String getCheckedd() {
+        return getChecked();
     }
 
 
