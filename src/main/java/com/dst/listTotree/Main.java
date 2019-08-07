@@ -42,7 +42,7 @@ public class Main {
         list.add(menu);
 
 
-
+        System.out.println("dst");
 
 //        System.out.println(JSONArray.fromObject(TreeUtil.getTree(list)));
         System.out.println(JSONArray.fromObject(TreeUtil.getTreeState(list,list1)));
