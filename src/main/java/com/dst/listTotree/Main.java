@@ -41,7 +41,7 @@ public class Main {
         menu = new Menu("7", "0", "name4", "url4");
         list.add(menu);
 
-
+        System.out.println();
 
 //        System.out.println(JSONArray.fromObject(TreeUtil.getTree(list)));
         System.out.println(JSONArray.fromObject(TreeUtil.getTreeState(list,list1)));
