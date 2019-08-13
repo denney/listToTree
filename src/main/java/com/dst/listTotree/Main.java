@@ -68,7 +68,6 @@ public class Main {
             }
         }
 
-
-        System.out.println(TreeUtil.getTreeBy(list));
+        System.out.println(TreeUtil.getTreeBy(list, ""));
     }
 }

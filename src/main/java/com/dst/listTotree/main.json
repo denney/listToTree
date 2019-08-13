@@ -1,48 +1,164 @@
 [
   {
-    "detail": {
-      "id": "1",
-      "itemId": "1",
-      "parentId": "",
-      "pid": "",
-      "textContent": "name1",
-      "url": "url1"
-    },
-    "nodes": [
+    "checked": "",
+    "id": "1",
+    "itemId": "1",
+    "parentId": "",
+    "pid": "",
+    "textContent": "name1",
+    "url": "url1",
+    "child": [
       {
+        "checked": "",
+        "id": "2",
+        "itemId": "2",
+        "parentId": "1",
+        "pid": "1",
+        "textContent": "name2",
+        "url": "url2",
+        "child": [
+          {
+            "checked": "",
+            "id": "4",
+            "itemId": "4",
+            "parentId": "2",
+            "pid": "2",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
 
-        "detail": {
-          "id": "3",
-          "itemId": "3",
-          "parentId": "1",
-          "pid": "1",
-          "textContent": "name3",
-          "url": "url3"
-        },
-        "nodes": []
+            ]
+          },
+          {
+            "checked": "",
+            "id": "5",
+            "itemId": "5",
+            "parentId": "2",
+            "pid": "2",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          }
+        ]
       },
       {
-        "detail": {
-          "id": "4",
-          "itemId": "4",
-          "parentId": "1",
-          "pid": "1",
-          "textContent": "name4",
-          "url": "url4"
-        },
-        "nodes": []
+        "checked": "",
+        "id": "3",
+        "itemId": "3",
+        "parentId": "1",
+        "pid": "1",
+        "textContent": "name3",
+        "url": "url3",
+        "child": [
+          {
+            "checked": "",
+            "id": "6",
+            "itemId": "6",
+            "parentId": "3",
+            "pid": "3",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          },
+          {
+            "checked": "",
+            "id": "7",
+            "itemId": "7",
+            "parentId": "3",
+            "pid": "3",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          }
+        ]
       }
     ]
   },
   {
-    "detail": {
-      "id": "2",
-      "itemId": "2",
-      "parentId": "",
-      "pid": "",
-      "textContent": "name2",
-      "url": "url2"
-    },
-    "nodes": []
+    "checked": "true",
+    "id": "8",
+    "itemId": "8",
+    "parentId": "",
+    "pid": "",
+    "textContent": "name4",
+    "url": "url4",
+    "child": [
+      {
+        "checked": "",
+        "id": "9",
+        "itemId": "9",
+        "parentId": "8",
+        "pid": "8",
+        "textContent": "name4",
+        "url": "url4",
+        "child": [
+          {
+            "checked": "",
+            "id": "11",
+            "itemId": "11",
+            "parentId": "9",
+            "pid": "9",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          },
+          {
+            "checked": "",
+            "id": "12",
+            "itemId": "12",
+            "parentId": "9",
+            "pid": "9",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "checked": "true",
+        "id": "10",
+        "itemId": "10",
+        "parentId": "8",
+        "pid": "8",
+        "textContent": "name4",
+        "url": "url4",
+        "child": [
+          {
+            "checked": "",
+            "id": "13",
+            "itemId": "13",
+            "parentId": "10",
+            "pid": "10",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          },
+          {
+            "checked": "true",
+            "id": "14",
+            "itemId": "14",
+            "parentId": "10",
+            "pid": "10",
+            "textContent": "name4",
+            "url": "url4",
+            "child": [
+
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

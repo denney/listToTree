@@ -16,13 +16,16 @@ import java.util.*;
 public class TreeUtil {
 
 
+    public static final String NODES = "Nodes";
+
     /**
      * 获取业务类数据
      *
      * @param originList
+     * @param customFields
      * @return
      */
-    public static JSONArray getTreeBy(List<? extends Tree> originList) {
+    public static JSONArray getTreeBy(List<? extends Tree> originList, String customFields) {
 
 
 
@@ -33,7 +36,7 @@ public class TreeUtil {
         List<Model> list1 = getData(modelList,originList);
 
 
-        JSONArray jsonArray = getBeautifulTreeJsonBy(list1);
+        JSONArray jsonArray = getBeautifulTreeJsonBy(list1, getCustomFields(customFields));
 
 
         return jsonArray;
@@ -41,14 +44,14 @@ public class TreeUtil {
 
     }
 
-    public static JSONArray getBeautifulTreeJsonBy(List<Model> list1) {
+    public static JSONArray getBeautifulTreeJsonBy(List<Model> list1, String customFields) {
         JSONArray jsonArray = new JSONArray();
 
 
         for (Model model : list1) {
 
             JSONObject object = JSONObject.fromObject(model.getDetail());
-            pushChilds(model, object);
+            pushChilds(model, object,getCustomFields(customFields));
 
             jsonArray.add(object);
         }
@@ -73,18 +76,26 @@ public class TreeUtil {
         return false;
     }
 
-    private static void pushChilds(Model model, JSONObject object) {
+    private static void pushChilds(Model model, JSONObject object,String customFields) {
         JSONArray array = new JSONArray();
         for (Model m : model.getNodes()) {
 
 
             JSONObject o = JSONObject.fromObject(m.getDetail());
 
-            pushChilds(m, o);
+            pushChilds(m, o,customFields);
 
             array.add(o);
         }
-        object.put("child", array);
+        object.put(getCustomFields(customFields), array);
+    }
+
+    private static String getCustomFields(String customFields) {
+        if (customFields==null||"".equals(customFields)){
+            return NODES;
+
+        }
+      return customFields;
     }
 
 
