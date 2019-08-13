@@ -19,15 +19,18 @@ public class TreeUtil {
     /**
      * 获取业务类数据
      *
-     * @param list
+     * @param originList
      * @return
      */
-    public static JSONArray getTree(List<? extends Tree> list) {
-
-        List<Model> modelList = getModels(list);
+    public static JSONArray getTree(List<? extends Tree> originList) {
 
 
-        List<Model> list1 = getData(modelList);
+
+
+        List<Model> modelList = getModels(originList);
+
+
+        List<Model> list1 = getData(modelList,originList);
         JSONArray jsonArray = new JSONArray();
 
 
@@ -45,6 +48,24 @@ public class TreeUtil {
 
     }
 
+    private static boolean isNoPid(List<? extends Tree> originList, String pid) {
+        List<Tree> trees = new ArrayList<>(originList);
+        return isPid(trees,pid);
+    }
+
+    private static boolean isPid( List<Tree> trees,String pid) {
+        Set<String> ids = new HashSet();
+        for (Tree tree : trees) {
+            ids.add(tree.getItemId());
+        }
+        if (!ids.contains(pid)) {
+            return true;
+        }
+
+
+        return false;
+    }
+
     private static void pushChilds(Model model, JSONObject object) {
         JSONArray array = new JSONArray();
         for (Model m : model.getNodes()) {
@@ -59,19 +80,6 @@ public class TreeUtil {
         object.put("child", array);
     }
 
-    private static void putChilds(Model model, JSONObject obj) {
-
-
-        for (Object o : obj.getJSONArray("child")) {
-
-            JSONObject jsonObject = JSONObject.fromObject(o);
-//            obj   jsonObject.getString("detail");
-
-
-//            putChilds(obj);
-
-        }
-    }
 
     /**
      * 将传入的集合转化为接口集合
@@ -157,7 +165,7 @@ public class TreeUtil {
 //            查询出父亲级id 并保存在set集合中
 
             //如果状态项的父及为根节点（root）直接将此项放入set集合中
-            if (isaBoolean(state.getParentId())) {
+            if (isNoPid(list,state.getParentId())) {
                 set.add(state.getItemId());
             } else {
                 //否则，先将状态项放入set,
@@ -190,7 +198,7 @@ public class TreeUtil {
             if (treeState.getParentId().equals(tree.getItemId())) {
                 set.add(tree.getItemId());
 
-                if (isaBoolean(tree.getParentId())) {
+                if (isNoPid(list,tree.getParentId())) {
                     continue;
                 } else {
                     set = getSet(list, tree, set);
@@ -208,9 +216,10 @@ public class TreeUtil {
      * 将list转化为tree 外壳
      *
      * @param modelList
+     * @param originList
      * @return
      */
-    public static List<Model> getData(List<Model> modelList) {
+    public static List<Model> getData(List<Model> modelList, List<? extends Tree> originList) {
 
 
         List<Model> list = new ArrayList<>();
@@ -222,7 +231,7 @@ public class TreeUtil {
             for (Model model : modelList) {
 
 //                判断是否为根节点(root)
-                if (isaBoolean(model.getDetail().getParentId())) {
+                if (isNoPid(originList,model.getDetail().getParentId())) {
 
                     //设置根节点(root)下的子节点集合
                     model.setNodes(addList(modelList, model.getDetail().getItemId()));
@@ -238,9 +247,7 @@ public class TreeUtil {
         return list;
     }
 
-    private static boolean isaBoolean(String pid) {
-        return pid == null || "".equals(pid) || "0".equals(pid) || "-1".equals(pid);
-    }
+
 
 
     /**
