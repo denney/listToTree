@@ -22,7 +22,7 @@ public class TreeUtil {
      * @param originList
      * @return
      */
-    public static JSONArray getTree(List<? extends Tree> originList) {
+    public static JSONArray getTreeBy(List<? extends Tree> originList) {
 
 
 
@@ -31,6 +31,17 @@ public class TreeUtil {
 
 
         List<Model> list1 = getData(modelList,originList);
+
+
+        JSONArray jsonArray = getBeautifulTreeJsonBy(list1);
+
+
+        return jsonArray;
+
+
+    }
+
+    public static JSONArray getBeautifulTreeJsonBy(List<Model> list1) {
         JSONArray jsonArray = new JSONArray();
 
 
@@ -41,11 +52,7 @@ public class TreeUtil {
 
             jsonArray.add(object);
         }
-
-
         return jsonArray;
-
-
     }
 
     private static boolean isNoPid(List<? extends Tree> originList, String pid) {
@@ -115,49 +122,10 @@ public class TreeUtil {
     }
 
 
-    /**
-     * 获取最末端节点包含设备项的tree 与原生tree 的关系    显示与隐藏包含tree的项和不包含tree的项
-     *
-     * @param list //     * @param listState
-     * @return
-     */
-//    public static List<Model> getTreeState(List<? extends Tree> list, List<? extends Tree> listState) {
-//
-//        //获取包含设备的 所有tree 项
-//        Set set = getSet(list, listState);
-//
-//        //获取所有tree,用true状态表示 含有设备的tree
-//        List<Model> modelList = getModels(list, set);
-//
-//
-//        //将list转化为tree
-//        return getData(modelList);
-//
-//
-//    }
-//
-//    private static List<Model> getModels(List<? extends Tree> list, Set set) {
-//        List<Tree> array = new ArrayList<>(list);
-//        List<Model> modelList = new ArrayList<>();
-//        for (Tree tree : array) {
-//
-//
-//            Model treeModel = new Model();
-//
-//
-//            treeModel.setDetail(tree);
-//
-//
-//
-//            //这个if是个开关，可以决定给前端返回什么样的tree
-////            if (set.contains(tree.getItemId())) {
-////                treeModel.setState("true");
-////            }
-//            modelList.add(treeModel);
-//        }
-//        return modelList;
-//    }
-    private static Set getSet(List<? extends Tree> list, List<? extends Tree> statesList) {
+
+
+
+    public static Set getSet(List<? extends Tree> list, List<? extends Tree> statesList) {
         Set set = new HashSet();
         //根据最末端id，查询该末端id对应的父及id，并设置为true
         List<Tree> stateList = new ArrayList<>(statesList);

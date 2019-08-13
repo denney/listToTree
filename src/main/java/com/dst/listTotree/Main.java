@@ -1,19 +1,19 @@
 package com.dst.listTotree;
 
-import com.dst.listTotree.model.Model;
-import net.sf.json.JSONArray;
 import com.dst.listTotree.dosomething.Menu;
 import com.dst.listTotree.util.TreeUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-        List list = new ArrayList();
+        List<Menu> list = new ArrayList();
+        List list1 = new ArrayList();
 
         Menu menu = new Menu("1", null, "name1", "url1");
         list.add(menu);
@@ -44,6 +44,7 @@ public class Main {
 
         menu = new Menu("10", "8", "name4", "url4");
         list.add(menu);
+        list1.add(menu);
         menu = new Menu("11", "9", "name4", "url4");
         list.add(menu);
         menu = new Menu("12", "9", "name4", "url4");
@@ -52,16 +53,22 @@ public class Main {
         list.add(menu);
         menu = new Menu("14", "10", "name4", "url4");
         list.add(menu);
+        list1.add(menu);
 
 
+//        System.out.println(TreeUtil.getTreeBy(list));
+//        System.out.println(TreeUtil.getBeautifulTreeJsonBy(TreeUtil.getTreeBy(list)));
+
+        Set set = TreeUtil.getSet(list, list1);
 
 
+        for (Menu o : list) {
+            if (set.contains(o.getId())) {
+                o.setChecked(true + "");
+            }
+        }
 
 
-        System.out.println(TreeUtil.getTree(list));
-
-
-
-
+        System.out.println(TreeUtil.getTreeBy(list));
     }
 }
