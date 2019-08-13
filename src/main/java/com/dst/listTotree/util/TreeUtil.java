@@ -28,18 +28,16 @@ public class TreeUtil {
 
 
         List<Model> list1 = getData(modelList);
-        JSONArray jsonArray=new JSONArray();
-        JSONObject object=new JSONObject();
+        JSONArray jsonArray = new JSONArray();
 
 
-//        for (Model model : list1) {
-//            object.put("id",model.getDetail().getItemId());
-//            object.put("pId",model.getDetail().getParentId());
-//            object.put("node",JSONArray.fromObject())
-//            putChilds(model ,object);
-//
-//            jsonArray.add(object);
-//        }
+        for (Model model : list1) {
+
+            JSONObject object = JSONObject.fromObject(model.getDetail());
+            pushChilds(model, object);
+
+            jsonArray.add(object);
+        }
 
 
         return jsonArray;
@@ -47,23 +45,30 @@ public class TreeUtil {
 
     }
 
-    private static void putChilds(Model model,JSONObject obj) {
+    private static void pushChilds(Model model, JSONObject object) {
+        JSONArray array = new JSONArray();
+        for (Model m : model.getNodes()) {
 
 
+            JSONObject o = JSONObject.fromObject(m.getDetail());
 
-        for (Object o :  obj.getJSONArray("child")) {
+            pushChilds(m, o);
 
-          JSONObject jsonObject=  JSONObject.fromObject(o);
+            array.add(o);
+        }
+        object.put("child", array);
+    }
+
+    private static void putChilds(Model model, JSONObject obj) {
+
+
+        for (Object o : obj.getJSONArray("child")) {
+
+            JSONObject jsonObject = JSONObject.fromObject(o);
 //            obj   jsonObject.getString("detail");
 
 
-
-
-
-
-
-
-            putChilds(obj);
+//            putChilds(obj);
 
         }
     }
@@ -105,8 +110,7 @@ public class TreeUtil {
     /**
      * 获取最末端节点包含设备项的tree 与原生tree 的关系    显示与隐藏包含tree的项和不包含tree的项
      *
-     * @param list
-//     * @param listState
+     * @param list //     * @param listState
      * @return
      */
 //    public static List<Model> getTreeState(List<? extends Tree> list, List<? extends Tree> listState) {
