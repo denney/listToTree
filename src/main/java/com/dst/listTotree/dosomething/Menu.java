@@ -73,15 +73,24 @@ public class Menu implements Tree {
         return this.pid;
     }
 
-    @Override
-    public String getName() {
-        return getTextContent();
-    }
+//    @Override
+//    public String getName() {
+//        return getTextContent();
+//    }
+//
+//    @Override
+//    public String getCheckedd() {
+//        return getChecked();
+//    }
 
     @Override
-    public String getCheckedd() {
-        return getChecked();
+    public String toString() {
+        return "Menu{" +
+                "id='" + id + '\'' +
+                ", textContent='" + textContent + '\'' +
+                ", pid='" + pid + '\'' +
+                ", url='" + url + '\'' +
+                ", checked='" + checked + '\'' +
+                '}';
     }
-
-
 }
