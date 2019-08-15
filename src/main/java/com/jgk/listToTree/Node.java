@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Node<T> {
     private T treeObj;
-    private List<Node> nodeList;
+    private List<Node<T>> nodeList;
 
 
     public Node() {
@@ -20,13 +20,19 @@ public class Node<T> {
         this.treeObj = treeObj;
     }
 
-    public List<Node> getNodeList() {
+    public List<Node<T>> getNodeList() {
         return nodeList;
     }
 
-    public void setNodeList(List<Node> nodeList) {
+    public void setNodeList(List<Node<T>> nodeList) {
         this.nodeList = nodeList;
     }
 
-
+    @Override
+    public String toString() {
+        return "Node{" +
+                "treeObj=" + treeObj +
+                ", nodeList=" + nodeList +
+                '}';
+    }
 }

@@ -1,15 +1,15 @@
-package com.jgk.listToTree;
+package com.jgk.listToTree.old;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.jgk.listToTree.Node;
+import com.jgk.listToTree.TreeDepthFunc;
 import org.apache.commons.lang.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 
 public class TreeUtils {
@@ -23,12 +23,10 @@ public class TreeUtils {
      * @return
      */
 
-    //根据list直接转为 Json
-    public static <T> JSONArray listToJsonArray(String parentIdProperty, String idProperty, List<T> nodeList) {
-        List<String> ppidList = getPpidList(parentIdProperty, idProperty, nodeList);
-        JSONArray array = new JSONArray();
+    public static <T> JSONArray listToTreeJsonV1(String parentIdProperty, String idProperty, List<T> nodeList) {
         return getJsonTree(parentIdProperty, idProperty, nodeList, null);
     }
+
     public static <T> JSONArray getJsonTree(String parentIdProperty, String idProperty, List<T> nodeList, String pid) {
         JSONArray jsonArray = new JSONArray();
         for (T t : nodeList) {
@@ -46,27 +44,28 @@ public class TreeUtils {
     }
 
 
-    //转化为根节点为空的树
+    //根节点为空的树
     public static <T> Node<T> listToTree(String parentIdProperty, String idProperty, List<T> originList) {
-        List<Node<T>> nodeList = new ArrayList<>();
+        List<Node> nodeList = new ArrayList<>();
         //业务集合转化为模型集合
         for (T t : originList) {
-            Node<T> node = new Node<>();
+            Node<T> node = new Node();
             node.setTreeObj(t);
             nodeList.add(node);
         }
-        Node<T> root = new Node<>();
+        Node root = new Node();
         root.setNodeList(getTree(parentIdProperty, idProperty, nodeList, null));
         return root;
     }
+
     //递归得到树(多棵树)
-    public static<T> List<Node<T>> getTree(String parentIdProperty, String idProperty, List<Node<T>> nodeList, String pid) {
-        List<Node<T>> list = new ArrayList<>();
-        for (Node<T> node : nodeList) {
+    public static List<Node> getTree(String parentIdProperty, String idProperty, List<Node> nodeList, String pid) {
+        List<Node> list = new ArrayList<>();
+        for (Node node : nodeList) {
             String realPid = getValueByProperty(parentIdProperty, node.getTreeObj());
             if (StringUtils.isEmpty(realPid) && StringUtils.isEmpty(pid) || StringUtils.isNotEmpty(realPid) && realPid.equals(pid)) {
                 String id = getValueByProperty(idProperty, node.getTreeObj());
-                List<Node<T>> nodes = getTree(parentIdProperty, idProperty, nodeList, id);
+                List<Node> nodes = getTree(parentIdProperty, idProperty, nodeList, id);
                 node.setNodeList(nodes);
                 list.add(node);
             }
@@ -74,30 +73,68 @@ public class TreeUtils {
         return list;
     }
 
-//  非递归
-    public static <T> Node<T> listToTreeBy(String parentIdProperty, String idProperty, List<T> originList) {
+
+
+    public  static JSONArray treeToJson2(Node root){
+        JSONArray jsonArray = new JSONArray();
+        for(Object node:root.getNodeList()){
+            jsonArray.add(getJson((Node) node));
+        }
+        return jsonArray;
+    }
+    public static JSONObject getJson(Node node) {
+        JSONObject jsonObject = JSONObject.parseObject(JSON.toJSONString(node.getTreeObj()));
+        JSONArray jsonArray = new JSONArray();
+        jsonObject.put("childList", jsonArray);
+        if (node.getNodeList() != null) {
+            for (Object n : node.getNodeList()) {
+                JSONObject object = getJson((Node) n);
+                jsonArray.add(object);
+            }
+        }
+        return jsonObject;
+    }
+
+    public  static <T> JSONArray treeToJson3(List<Node<T>> list){
+        JSONArray jsonArray = new JSONArray();
+        for (Node<T> n: list) {
+            JSONObject object = JSONObject.parseObject(JSON.toJSONString(n.getTreeObj()));
+            object.put("nodes", jsonArray);
+            object.put("nodes",treeToJson3(n.getNodeList()));
+            jsonArray.add(object);
+        }
+        return jsonArray;
+    }
+
+
+    public static <T> JSONArray listToTreeJson(String parentIdProperty, String idProperty, List<T> originList) {
         Node<T> root = new Node<>();
+        JSONArray json = new JSONArray();
         try {
-            List<Node<T>> nodeList = new ArrayList<>();
+            List<Node> nodeList = new ArrayList<>();
             //添加空集合
             nodeList.add(root);
 //            业务集合转化为模型集合
             for (T t : originList) {
-                Node<T> node = new Node<>();
+                Node<T> node = new Node();
                 node.setTreeObj(t);
                 nodeList.add(node);
             }
             //遍历模型集合
-            for (Node<T> node : nodeList) {
-                List<Node<T>> nodeChilds = new ArrayList<>();
-                for (Node<T> temp : nodeList) {
+            for (Node node : nodeList) {
+
+                List<Node> nodeChilds = new ArrayList<>();
+
+                for (Node temp : nodeList) {
                     //排除根节点
                     if (temp.getTreeObj() == null) {
                         continue;
                     }
                     //获得temp父节点
                     String pid = getValueByProperty(parentIdProperty, temp.getTreeObj());
+
 //                    pid可能为null     空字符串     0   -1    或者写成通用的
+
                     //node根节点，
                     if (node.getTreeObj() == null) {
                         //如果上级菜单为空字符串，0，-1,
@@ -119,74 +156,32 @@ public class TreeUtils {
                 }
                 node.setNodeList(nodeChilds);
             }
+            treeToJson(root, json);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return root;
+        return json;
     }
+    public static void treeToJson(Node root, JSONArray jsonArray) {
+        if (root.getTreeObj() != null) {
 
+            String jsonString = JSON.toJSONString(root.getTreeObj());
+            JSONObject jsonObject = JSONObject.parseObject(jsonString);
+            jsonObject.put("childList", new JSONArray());
+            jsonArray.add(jsonObject);
 
-
-    //由树转为Json(多棵树 转为 JsonArray)
-    public  static <T> JSONArray treeToJsonArray(List<Node<T>> list){
-        JSONArray jsonArray = new JSONArray();
-        for (Node<T> n: list) {
-            JSONObject object = JSONObject.parseObject(JSON.toJSONString(n.getTreeObj()));
-            object.put("nodes", jsonArray);
-            object.put("nodes",treeToJsonArray(n.getNodeList()));
-            jsonArray.add(object);
-        }
-        return jsonArray;
-    }
-
-    //根节点不为空的树 转为 Json
-    public static<T> JSONObject treeToJsonObject(Node<T> root) {
-        JSONObject jsonObject = JSONObject.parseObject(JSON.toJSONString(root.getTreeObj()));
-        JSONArray jsonArray = new JSONArray();
-        jsonObject.put("childList", jsonArray);
-        if (root.getNodeList() != null) {
-            for (Node node : root.getNodeList()) {
-                JSONObject object = treeToJsonObject(node);
-                jsonArray.add(object);
-            }
-        }
-        return jsonObject;
-    }
-
-    //根据原始数据的list得到根节点的id
-    public static <T> List<String> getPpidList(String parentIdProperty, String idProperty, List<T> list){
-        List<String> ppidList = new ArrayList<>();
-        Set<String> idSet = new TreeSet<>();
-        Set<String> pidSet = new TreeSet<>();
-        for (T t : list) {
-            String id = getValueByProperty(idProperty, t);
-            idSet.add(id);
-            String pid = getValueByProperty(parentIdProperty, t);
-            if(StringUtils.isNotEmpty(pid)){
-                pidSet.add(pid);
-            }
-        }
-        for(String pid:pidSet){
-            Boolean flag = true;
-            for (String id: idSet) {
-                if(id.equals(pid)){
-                    flag = false;
-                    break;
+            if (root.getNodeList() != null) {
+                for (Object node : root.getNodeList()) {
+                    treeToJson((Node) node, jsonObject.getJSONArray("childList"));
                 }
             }
-            if(flag){
-                ppidList.add(pid);
+        } else {
+            for (Object node : root.getNodeList()) {
+                treeToJson((Node) node, jsonArray);
             }
         }
-        ppidList.add("");
-        ppidList.add(null);
-        return ppidList;
     }
 
-
-
-
-    //根据属性名 得到属性值
     private static <T> String getValueByProperty(String parentIdProperty, T node) {
         Field field = null;
         try {

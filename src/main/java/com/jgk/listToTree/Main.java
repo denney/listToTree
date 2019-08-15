@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List list = new ArrayList();
+        List<Menu> list = new ArrayList();
 
         Menu menu = new Menu("1", null, "name1", "url1");
         list.add(menu);
@@ -49,20 +49,13 @@ public class Main {
         menu = new Menu("14", "10", "name4", "url4");
         list.add(menu);
 
-        JSONArray test = TreeUtils.listToTreeJson("pid", "id", list);
 
-        System.out.println(test);
-//
-//
-//        JSONArray jsonArray = new JSONArray();
-//        JSONObject o = new JSONObject();
-//        jsonArray.add(o);
-//
-//        o.put("test", "nihao");
-//
-//        o.put("test", "nihaossss");
-//        System.out.println(jsonArray);
+        Node<Menu> root = TreeUtils.listToTree("pid", "id", list);
+        JSONArray jsonArray1 = TreeUtils.treeToJsonArray(root.getNodeList());
+        System.out.println(jsonArray1);
 
+        JSONArray jsonArray2 = TreeUtils.listToJsonArray("pid", "id", list);
+        System.out.println(jsonArray2);
 
 //        treeUtils.DepthOrder((str)-> System.out.println(str),treeUtils.getRoot(),"pid");
 
