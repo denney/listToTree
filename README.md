@@ -11,8 +11,5 @@ list 转tree
 
 
 
-web 前端  treeTable
-将项目打包成war
-启动tomcat，访问 即可看到treetable效果
-http://localhost:8080/listToTree/treetable.html
+
 
